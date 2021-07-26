@@ -1,0 +1,42 @@
+<!-- Order Detail Content -->
+<div class="container"> 
+    <div class="row"> 
+       <div class="col-lg-12 text-center" style="padding-top: 20px;">
+          <div class="container" style="padding-left: 0px; padding-right: 0px;"> 
+             <div class="row"> 
+                <div class="col-sm" style="text-align: left;"> 
+                   {{ title }} 
+                </div>                 
+             </div> 
+          </div> 
+          <div class="container box" style="margin-top: 10px; width: 40%;"> 
+            <mat-spinner *ngIf="orderLoaded === false"></mat-spinner> 
+             <table class="table table-striped" *ngIf="orderLoaded === true" > 
+                  <tbody>
+                    <tr><td>Confirmation Number:</td><td>{{ orderDetail.confirmationNo }}</td></tr>
+                    <tr><td>Order Amount:</td><td>{{ orderDetail.totalPurchaseAmt | currency }}</td></tr>
+                    <tr><td>Tracking ID:</td><td>{{ orderDetail.originalTrackingNumber }}</td></tr>
+                    <tr><td>Disposition:</td><td>{{ orderDetail.disposition }}</td></tr>
+
+                    <tr><td>Transaction Token:</td><td>{{ orderDetail.transactionToken }}</td></tr>
+                    <tr><td>Purchase Amount:</td><td>{{ orderDetail.totalPurchaseAmt | currency }}</td></tr>
+                    <tr><td>Tax Amount:</td><td>{{ orderDetail.totalTaxAmount | currency }}</td></tr>
+                    <tr><td>Refund Amount:</td><td>{{ orderDetail.totalRefundAmount | currency }}</td></tr>                    
+
+                    <tr><td>First name:</td><td>{{ orderDetail.firstName }}</td></tr>
+                    <tr><td>Last Name:</td><td>{{ orderDetail.lastName }}</td></tr>
+                    <tr><td>Email:</td><td>{{ orderDetail.email }}</td></tr>
+                    <tr><td>Phone:</td><td>{{ orderDetail.phone }}</td></tr>
+                    
+                    <tr><td>Credit Card Amount:</td><td>{{ orderDetail.creditCardAmt }}</td></tr>
+                    <tr><td>Credit Card Number:</td><td>{{ orderDetail.creditCardNo }}</td></tr>
+                    <tr><td>Credit Card Type:</td><td>{{ orderDetail.creditCardType }}</td></tr>
+                    <tr><td>Payment Method:</td><td>{{ orderDetail.payMethod }}</td></tr>
+                  </tbody> 
+             </table> 
+          </div> 
+       </div> 
+    </div> 
+ </div>
+
+

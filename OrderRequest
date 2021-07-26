@@ -1,0 +1,4 @@
+export class OrderRequest {
+orderId: String
+orderRefNum: String
+}
